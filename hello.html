@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 2rem;
+}
+
+.tree, .tree ul, .tree ol {
+  list-style: none;
+}
+
+.tree ul, .tree ol {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tree ul::before, .tree ol::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #999;
+  display: block;
+  width: 0;
+}
+
+.tree li {
+  position: relative;
+}
+
+.tree li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rem;
+  height: 50%;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+}
+
+.tree li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1rem;
+  height: 50%;
+  border-left: 1px solid #999;
+}
+
+.tree li:first-child::before {
+  height: 100%;
+}
+
+.tree li:last-child::before {
+  border-bottom: none;
+}
+
+    </style>
+</head>
+<body>
+    <ul class="tree">
+  <li>Root
+    <ul>
+      <li>Branch
+        <ul>
+          <li>Leaf</li>
+          <li>Leaf</li>
+        </ul>
+      </li>
+      <li>Branch</li>
+      <li>Branch
+        <ul>
+          <li>Leaf</li>
+          <li>Leaf</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>
