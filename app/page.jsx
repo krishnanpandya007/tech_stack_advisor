@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon } from 'lucide-react';
+import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon, ZapIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export const backgroundStyle = {
   backgroundImage: `
@@ -85,8 +86,8 @@ export default function Home() {
         <section className="container mx-auto px-4 py-16 text-center w-full" >
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Lightbulb className="w-4 h-4" />
-              <span>Smart Technology Recommendations</span>
+              <ZapIcon className="w-4 h-4" />
+              <span>Includes Trending Techs</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -121,16 +122,15 @@ export default function Home() {
                   </>
                 )}
               </Button>
-              
-                <Button 
-                  size="lg" 
-                  onClick={handleStartQuiz}
-                  disabled={isStarting}
-                  className="rounded-xl bg-white text-black border border-black hover:bg-white"
-                >
-                  Github Repo
-                  <ExternalLinkIcon className='ml-2 w-5 h-5 ' color='black' />
-                </Button>
+                <Link href='https://github.com/krishnanpandya007/tech_stack_advisor/tree/main'>
+                  <Button 
+                    size="lg" 
+                    className="rounded-xl bg-white text-black border border-black hover:bg-white"
+                    >
+                    Github Repo
+                    <ExternalLinkIcon className='ml-2 w-5 h-5 ' color='black' />
+                  </Button>
+                </Link>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">

@@ -224,8 +224,8 @@ export default function ResultsPage() {
           <CardHeader className="pb-3">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3 flex-1 min-w-0">
-                <div className="w-6 h-6 bg-muted rounded-md flex items-center justify-center flex-shrink-0">
-                  <span className="font-semibold text-primary text-xs">#{index + 1}</span>
+                <div className="w-8 h-8 bg-muted rounded-md flex items-center justify-center flex-shrink-0">
+                  <span className="font-semibold text-primary text-sm ">{index + 1}</span>
                 </div>
                 <div className="min-w-0 flex-1">
                   <CardTitle className="text-lg font-bold text-foreground mb-1">
@@ -303,17 +303,18 @@ export default function ResultsPage() {
                   </div>
                 </div>
                 <div>
-                  {/* <Link href={tech.documentation_link}> */}
+                  <Link href={stack.documentation_link}>
                     <Button 
                     size="sm" 
                     onClick={() => {}}
                     disabled={false}
-                    className="rounded-sm bg-white text-black border border-black hover:bg-white text-xs"
+                    className="rounded-sm bg-white text-black border border-black hover:bg-white text-xs h-8"
+                    
                   >
                     Documentation
                     <SquareArrowOutUpRightIcon className='ml-1.5 w-3.5 h-3.5 ' color='black' />
                   </Button>
-                  {/* </Link> */}
+                  </Link> 
                 </div>
               </div>
 
