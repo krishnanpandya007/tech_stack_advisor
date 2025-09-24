@@ -10,6 +10,7 @@
 
 # next.js
 /.next/
+/.bolt/
 /out/
 
 # production
@@ -34,3 +35,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+hello.html
