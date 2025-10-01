@@ -125,7 +125,7 @@ export default function ResultsPage() {
             <div className="flex items-center space-x-2">
               <Button variant="outline" size="sm" onClick={handleExportResults}>
                 <Braces className="w-4 h-4 mr-2" />
-                .JSON
+                Export
               </Button>
               {/* <Button variant="outline" size="sm"> */}
                 {/* <Github className="w-5 h-5" /> */}

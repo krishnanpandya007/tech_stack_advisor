@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon, ZapIcon } from 'lucide-react';
+import {ProfileCard} from '@/components/ProfileCard';
+import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon, ZapIcon, User, LocateIcon, Github, Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 export const backgroundStyle = {
@@ -180,8 +181,71 @@ export default function Home() {
 
       <section className="container mx-auto px-4 py-16">
         <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
-          <CardContent className="text-center py-12">
-            <h2 className="text-3xl font-bold mb-4">
+          <CardContent className="text-center py-12 flex justify-center">
+            <Card className='w-[25ch] p-2'>
+              <div className="outliner border-2 border border-gray-300 rounded-sm p-2">
+                <div className="profile-card-banner  rounded-md py-1 bg-[#696FC7] text-white font-bold ">
+                  Let's connect
+                </div>
+                <div className="flex-col text-left mt-2 gap-2 justify-center border-t-2 border-dashed border-red pt-3 font-bold pl-2">
+                  Krishnan Pandya
+                  <br/>
+                  <span className='text-gray-600 text-sm' style={{fontWeight: 200}}>I enjoy building techs and exploring.</span>
+                </div>
+                <div className="flex mt-2 gap-2 justify-left border-t-2 border-dashed border-red pt-3 pl-2">
+                  <a href='https://krishnanpandya06.github.io/' target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      size="md" 
+                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      >
+                        
+                      
+                      <Globe width={20} height={20} />
+                    </Button>
+                  </a>
+                  <a href='https://www.github.com/krishnanpandya007' target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      size="md" 
+                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      >
+                        
+                      
+                      <Github width={20} height={20} />
+                    </Button>
+                  </a>
+                  <a href='https://www.linkedin.com/in/krishnanpandya' target="_blank" rel="noopener noreferrer">
+
+                    <Button 
+                      size="md" 
+                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      >
+                      <Linkedin width={20} height={20} />
+                    </Button>
+                  </a>
+                  <a href="mailto:krishnanpandya0001@gmail.com">
+
+                    <Button 
+                      size="md" 
+                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      >
+                      <Mail width={20} height={20} />
+                    </Button>
+                  </a>
+                  <a href='https://www.instagram.com/krishnanpandya' target="_blank" rel="noopener noreferrer">
+
+                    <Button 
+                      size="md" 
+                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      >
+                      <Instagram width={20} height={20} />
+                    </Button>
+                  </a>
+
+                </div>
+
+              </div>
+            </Card>
+            {/* <h2 className="text-3xl font-bold mb-4">
               Ready to Find Your Perfect Tech Stack?
             </h2>
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -205,7 +269,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </>
               )}
-            </Button>
+            </Button> */}
           </CardContent>
         </Card>
       </section>
