@@ -108,7 +108,7 @@ export default function Home() {
                 size="lg" 
                 onClick={handleStartQuiz}
                 disabled={isStarting}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-xl hover:scale-[0.96] transition-all duration-300 transform"
               >
                 {isStarting ? (
                   <div className="flex items-center space-x-2">

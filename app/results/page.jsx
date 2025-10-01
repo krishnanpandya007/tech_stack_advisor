@@ -48,7 +48,10 @@ export default function ResultsPage() {
     // Calculate recommendations
     const scored = calculateTechStackScores(profile);
     setRecommendations(scored);
-    setIsLoading(false);
+    setTimeout(() => {
+
+      setIsLoading(false);
+    }, 1000)
   }, [router]);
 
   const handleRetakeQuiz = () => {
@@ -93,7 +96,7 @@ export default function ResultsPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-8"></div>
           <h2 className="text-xl font-semibold text-gray-900">Analyzing Your Requirements...</h2>
           <p className="text-gray-600 mt-2">Finding the perfect tech stack for your project</p>
         </div>
@@ -132,7 +135,7 @@ export default function ResultsPage() {
       </header>
 
       <div className="max-w-4xl mx-auto px-6 py-6 space-y-6">
-  {/* Compact Header */}
+
   <div className="text-center space-y-3">
     <div className="inline-flex items-center gap-2 bg-success-muted text-success px-3 py-1.5 rounded-full text-sm font-medium" style={{backgroundColor: "#ECFAE599", border: '1px solid #B0DB9C80'}}>
       <CheckCircle className="w-3.5 h-3.5 text-green" />
@@ -148,7 +151,6 @@ export default function ResultsPage() {
     </div>
   </div>
 
-  {/* Compact Top Recommendation */}
   <Card className="border border-primary/20 bg-gradient-to-r from-neutral-light to-accent/50 shadow-sm">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between gap-4">
@@ -256,9 +258,9 @@ export default function ResultsPage() {
                     {stack.frontend.map((tech, i) => (
                       <div key={i} className="flex items-center gap-1.5">
                         <span className="text-sm"><CornerDownRight className='w-3.5 h-3.5' /></span>
-                        <Link href={tech.documentation_link}>
+                        <a target="_blank" rel="noopener noreferrer" href={tech.documentation_link}>
                           <span className="text-xs text-muted-foreground underline">{tech.name}</span>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
@@ -269,9 +271,9 @@ export default function ResultsPage() {
                     {stack.backend.map((tech, i) => (
                       <div key={i} className="flex items-center gap-1.5">
                         <span className="text-sm"><CornerDownRight className='w-3.5 h-3.5' /></span>
-                        <Link href={tech.documentation_link}>
+                        <a href={tech.documentation_link} target="_blank" rel="noopener noreferrer" >
                           <span className="text-xs text-muted-foreground underline">{tech.name}</span>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
@@ -282,9 +284,9 @@ export default function ResultsPage() {
                     {stack.database.map((tech, i) => (
                       <div key={i} className="flex items-center gap-1.5">
                         <span className="text-sm"><CornerDownRight className='w-3.5 h-3.5' /></span>
-                        <Link href={tech.documentation_link}>
+                        <a href={tech.documentation_link} target="_blank" rel="noopener noreferrer" >
                           <span className="text-xs text-muted-foreground underline">{tech.name}</span>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
@@ -295,15 +297,15 @@ export default function ResultsPage() {
                     {stack.deployment.map((tech, i) => (
                       <div key={i} className="flex items-center gap-1.5">
                         <span className="text-sm"><CornerDownRight className='w-3.5 h-3.5' /></span>
-                        <Link href={tech.documentation_link}>
+                        <a href={tech.documentation_link} target="_blank" rel="noopener noreferrer" >
                           <span className="text-xs text-muted-foreground underline">{tech.name}</span>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <Link href={stack.documentation_link}>
+                  <a href={stack.documentation_link} target="_blank" rel="noopener noreferrer" >
                     <Button 
                     size="sm" 
                     onClick={() => {}}
@@ -314,7 +316,7 @@ export default function ResultsPage() {
                     Documentation
                     <SquareArrowOutUpRightIcon className='ml-1.5 w-3.5 h-3.5 ' color='black' />
                   </Button>
-                  </Link> 
+                  </a> 
                 </div>
               </div>
 

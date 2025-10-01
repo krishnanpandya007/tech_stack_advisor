@@ -14,7 +14,7 @@ import { backgroundStyle } from '../page';
 import Link from 'next/link';
 
 export default function QuizPage() {
-  const router = useRouter();
+  // const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -65,7 +65,10 @@ export default function QuizPage() {
     localStorage.setItem('quizAnswers', JSON.stringify(profile));
     
     setTimeout(() => {
-      router.push('/results');
+      // router.push('/results');
+      window.open('/results', '_blank').focus();
+      setIsSubmitting(false);
+
     }, 1000);
   };
 

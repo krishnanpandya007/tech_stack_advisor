@@ -1,7 +1,7 @@
 import './globals.css'; 
 import { Rubik } from 'next/font/google';
 
-const inter = Rubik({ subsets: ['latin'], weight: "400" });
+const rubik = Rubik({ subsets: ['latin'], weight: "400" });
 
 export const metadata = {
   title: 'Tech Stack Advisor - Find Your Perfect Technology Stack',
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ letterSpacing: 0 }}>
+      <body className={rubik.className} style={{ letterSpacing: 0 }}>
         {children}
       </body>
     </html>
