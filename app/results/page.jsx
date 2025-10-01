@@ -23,7 +23,9 @@ import {
   Crown,
   CornerDownRight,
   ExternalLinkIcon,
-  SquareArrowOutUpRightIcon
+  SquareArrowOutUpRightIcon,
+  Braces,
+  Github
 } from 'lucide-react';
 import { calculateTechStackScores } from '@/lib/tech-stacks';
 import { backgroundStyle } from '../page';
@@ -122,13 +124,13 @@ export default function ResultsPage() {
             </div>
             <div className="flex items-center space-x-2">
               <Button variant="outline" size="sm" onClick={handleExportResults}>
-                <Download className="w-4 h-4 mr-2" />
-                Export
+                <Braces className="w-4 h-4 mr-2" />
+                .JSON
               </Button>
-              <Button variant="outline" size="sm">
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
-              </Button>
+              {/* <Button variant="outline" size="sm"> */}
+                {/* <Github className="w-5 h-5" /> */}
+                {/* Share */}
+              {/* </Button> */}
             </div>
           </div>
         </div>
@@ -143,10 +145,10 @@ export default function ResultsPage() {
     </div>
     <div>
       <h1 className="text-3xl font-bold text-foreground mb-2">
-        Tech Stack Recommendations
+        Recommendations for you
       </h1>
       <p className="text-muted-foreground text-base max-w-xl mx-auto">
-        Personalized technology stacks ranked for your project requirements.
+        Personalized technology stacks ranked with learning curve level.
       </p>
     </div>
   </div>
@@ -159,9 +161,6 @@ export default function ResultsPage() {
             <Badge className="bg-primary text-primary-foreground text-xs px-2 py-0.5">
               <Crown className='w-3.5 h-3.5 text-yellow mr-1' fill='gold' stroke='yellow' />  Top Choice
             </Badge>
-            <Badge variant="outline" className={`text-xs px-2 py-0.5 ${getLearningCurveColor(topRecommendation.learningCurve)}`}>
-              {topRecommendation.learningCurve}
-            </Badge>
           </div>
           <CardTitle className="text-xl font-bold text-foreground mb-1">
             {topRecommendation.name}
@@ -171,10 +170,11 @@ export default function ResultsPage() {
           </CardDescription>
         </div>
         <div className="text-right flex-shrink-0">
-          <div className="text-2xl font-bold text-primary mb-0.5">
-            {topRecommendation.score}%
+          <div className="text-2xl font-bold text-primary mb-0.5" >
+            <Badge variant="outline" className={`text-xs px-2 py-0.5 ${getLearningCurveColor(topRecommendation.learningCurve)}`}>
+              {topRecommendation.learningCurve}
+            </Badge>
           </div>
-          <div className="text-xs text-muted-foreground">Match</div>
         </div>
       </div>
     </CardHeader>
@@ -239,9 +239,6 @@ export default function ResultsPage() {
                 </div>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className={`text-xl font-bold mb-0.5 ${getScoreColor(stack.score)}`}>
-                  {stack.score}%
-                </div>
                 <Badge variant="outline" className={`text-xs px-2 py-0.5 ${getLearningCurveColor(stack.learningCurve)}`}>
                   {stack.learningCurve}
                 </Badge>
@@ -431,9 +428,6 @@ export default function ResultsPage() {
     <Button variant="outline" size="sm" onClick={handleRetakeQuiz} className="flex items-center gap-2">
       <ArrowLeft className="w-4 h-4" />
       Retake Quiz
-    </Button>
-    <Button size="sm" onClick={() => router.push('/')} className="bg-primary hover:bg-primary/90">
-      New Analysis
     </Button>
   </div>
 </div>

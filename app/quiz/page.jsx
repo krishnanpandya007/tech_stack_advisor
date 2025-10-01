@@ -79,6 +79,9 @@ export default function QuizPage() {
     if (question.type === 'checkbox') {
       return Array.isArray(currentAnswer) && currentAnswer.length > 0;
     }
+    if(question.type == "slider"){
+      return true;
+    }
     
     return currentAnswer !== undefined && currentAnswer !== '';
   };
