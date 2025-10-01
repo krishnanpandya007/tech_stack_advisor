@@ -277,7 +277,7 @@ export default function Home() {
       <footer className="border-t bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-600">
-            <p>&copy; 2024 Tech Stack Advisor. Made with ❤️ by @krishnanpandya007 for developers.</p>
+            <p>&copy; 2024 Tech Stack Advisor. Made with ❤️ by a developer for developers.</p>
           </div>
         </div>
       </footer>
