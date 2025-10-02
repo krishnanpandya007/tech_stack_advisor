@@ -9,6 +9,7 @@ import {ProfileCard} from '@/components/ProfileCard';
 import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon, ZapIcon, User, LocateIcon, Github, Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { backgroundStyle } from '@/lib/utils';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const router = useRouter();
@@ -272,13 +273,7 @@ export default function Home() {
         </Card>
       </section>
 
-      <footer className="border-t bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-gray-600">
-            <p>&copy; 2024 Tech Stack Advisor. Made with ❤️ by a developer for developers.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer /> 
     </div>
   );
 }
