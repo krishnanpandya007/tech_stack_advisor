@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Code, 
@@ -38,11 +37,10 @@ export default function ResultsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let savedAnswers = null
       if (typeof window !== 'undefined') {
 
-        const savedAnswers = localStorage.getItem('quizAnswers');
-      }else {
-        const savedAnswers = null
+         savedAnswers = localStorage.getItem('quizAnswers');
       }
 
     if (!savedAnswers) {

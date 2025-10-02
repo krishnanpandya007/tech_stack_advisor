@@ -16,7 +16,7 @@ import Link from 'next/link';
 export default function QuizPage() {
   // const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState([]);
+  const [answers, setAnswers] = useState([{questionId: 'teamSize', value: 1}]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
@@ -211,7 +211,13 @@ export default function QuizPage() {
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center space-x-4">
-            <Progress value={progress} className="flex-1" />
+            {/* <Progress value={progress} className="flex-1" /> */}
+            <div className="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-blue-500 transition-all duration-500 ease-out"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
             <span className="text-sm font-medium text-gray-600">
               {Math.round(progress)}%
             </span>
@@ -225,12 +231,14 @@ export default function QuizPage() {
             <CardHeader className="text-center pb-6">
               
               <CardTitle className="text-2xl font-bold text-gray-900 leading-tight">
+                <>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <div className="text-2xl font-bold text-blue-600">
-                  {currentQuestion + 1}
+                  <div className="text-2xl font-bold text-blue-600">
+                    {currentQuestion + 1}
+                  </div>
                 </div>
-              </div>
                 {question.question}
+                </>
               </CardTitle>
               {question.description && (
                 <CardDescription className="text-lg text-gray-600 mt-2">
