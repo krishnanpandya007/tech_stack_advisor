@@ -28,7 +28,7 @@ import {
   Github
 } from 'lucide-react';
 import { calculateTechStackScores } from '@/lib/tech-stacks';
-import { backgroundStyle } from '../page';
+import { backgroundStyle } from '@/lib/utils';
 import Link from 'next/link';
 
 export default function ResultsPage() {

@@ -8,16 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import {ProfileCard} from '@/components/ProfileCard';
 import { ArrowRight, Code, Zap, Target, Users, Lightbulb, CheckCircle, ExternalLinkIcon, ZapIcon, User, LocateIcon, Github, Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Globe } from 'lucide-react';
 import Link from 'next/link';
-
-export const backgroundStyle = {
-  backgroundImage: `
-    radial-gradient(rgb(0, 0, 255, 0.15) 0%, transparent 10%),
-    radial-gradient(rgb(0, 0, 255, 0.15) 0%, transparent 10%)
-  `,
-  backgroundPosition: '0px 0px, 28px 28px',
-  backgroundSize: '56px 56px',
-  backgroundColor: 'rgb(255, 255, 255)'
-};
+import { backgroundStyle } from '@/lib/utils';
 
 export default function Home() {
   const router = useRouter();
@@ -179,8 +170,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
+      <section className="container mx-auto px-4 py-16" >
+        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white" style={{
+      backgroundImage: `
+        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+        radial-gradient(circle 800px at 0% 200px, #2563eb99, #9333ea99)
+      `,
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%",
+    }}>
           <CardContent className="text-center py-12 flex justify-center">
             <Card className='w-[25ch] p-2'>
               <div className="outliner border-2 border border-gray-300 rounded-sm p-2">
@@ -196,48 +194,48 @@ export default function Home() {
                   <a href='https://krishnanpandya06.github.io/' target="_blank" rel="noopener noreferrer">
                     <Button 
                       size="md" 
-                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      className="rounded-md bg-white p-1 text-black border border-gray-300 hover:bg-white hover:outline hover:outline-1 hover:outline-[#696FC780] transition-outline-color duration-400 linear"
                       >
                         
                       
-                      <Globe width={20} height={20} />
+                      <Globe width={20} height={20} strokeWidth={1} />
                     </Button>
                   </a>
                   <a href='https://www.github.com/krishnanpandya007' target="_blank" rel="noopener noreferrer">
                     <Button 
                       size="md" 
-                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      className="rounded-md bg-white p-1 text-black border border-gray-300 hover:bg-white hover:outline hover:outline-1 hover:outline-[#696FC780] transition-outline-color duration-200 linear"
                       >
                         
                       
-                      <Github width={20} height={20} />
+                      <Github width={20} height={20} strokeWidth={1} />
                     </Button>
                   </a>
                   <a href='https://www.linkedin.com/in/krishnanpandya' target="_blank" rel="noopener noreferrer">
 
                     <Button 
                       size="md" 
-                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      className="rounded-md bg-white p-1 text-black border border-gray-300 hover:bg-white hover:outline hover:outline-1 hover:outline-[#696FC780] transition-outline-color duration-200 linear"
                       >
-                      <Linkedin width={20} height={20} />
+                      <Linkedin width={20} height={20} strokeWidth={1} />
                     </Button>
                   </a>
                   <a href="mailto:krishnanpandya0001@gmail.com">
 
                     <Button 
                       size="md" 
-                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      className="rounded-md bg-white p-1 text-black border border-gray-300 hover:bg-white hover:outline hover:outline-1 hover:outline-[#696FC780] transition-outline-color duration-200 linear"
                       >
-                      <Mail width={20} height={20} />
+                      <Mail width={20} height={20} strokeWidth={1} />
                     </Button>
                   </a>
                   <a href='https://www.instagram.com/krishnanpandya' target="_blank" rel="noopener noreferrer">
 
                     <Button 
                       size="md" 
-                      className="rounded-md bg-white p-1 text-black border border-black hover:bg-white"
+                      className="rounded-md bg-white p-1 text-black border border-gray-300 hover:bg-white hover:outline hover:outline-1 hover:outline-[#696FC780] transition-outline-color duration-200 linear"
                       >
-                      <Instagram width={20} height={20} />
+                      <Instagram width={20} height={20} strokeWidth={1} />
                     </Button>
                   </a>
 

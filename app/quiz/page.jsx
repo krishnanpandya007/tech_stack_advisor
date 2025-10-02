@@ -10,7 +10,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
 import { ArrowLeft, ArrowRight, Code, CheckCircle } from 'lucide-react';
 import { quizQuestions } from '@/lib/quiz-data';
-import { backgroundStyle } from '../page';
+import { backgroundStyle } from '@/lib/utils';
 import Link from 'next/link';
 
 export default function QuizPage() {
