@@ -62,7 +62,10 @@ export default function QuizPage() {
       profile[answer.questionId] = answer.value;
     });
 
-    localStorage.setItem('quizAnswers', JSON.stringify(profile));
+      if (typeof window !== 'undefined') {
+
+        localStorage.setItem('quizAnswers', JSON.stringify(profile));
+      }
     
     setTimeout(() => {
       // router.push('/results');

@@ -38,7 +38,13 @@ export default function ResultsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const savedAnswers = localStorage.getItem('quizAnswers');
+      if (typeof window !== 'undefined') {
+
+        const savedAnswers = localStorage.getItem('quizAnswers');
+      }else {
+        const savedAnswers = null
+      }
+
     if (!savedAnswers) {
       router.push('/');
       return;
