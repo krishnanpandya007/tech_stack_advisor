@@ -1,7 +1,7 @@
 import './globals.css'; 
 import { Rubik } from 'next/font/google';
 
-const rubik = Rubik({ subsets: ['latin'], weight: "400" });
+const asd = Rubik({ subsets: ['latin'], weight: "400" }); 
 
 export const metadata = {
   title: 'Tech Stack Advisor - Find Your Perfect Technology Stack',
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
       </head>
-      <body className={rubik.className} style={{ letterSpacing: 0 }}>
+      <body className={asd.className} style={{ letterSpacing: 0 }}>
         {children}
       </body>
     </html>

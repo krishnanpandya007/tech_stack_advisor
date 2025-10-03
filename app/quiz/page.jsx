@@ -115,7 +115,7 @@ export default function QuizPage() {
                       <div className="w-2 h-2 bg-white rounded-full" />
                     )}
                   </div>
-                  <span className="font-medium text-gray-900">{option}</span>
+                  <span className="font-medium text-sm text-gray-900">{option}</span>
                 </div>
               </div>
             ))}
@@ -147,7 +147,7 @@ export default function QuizPage() {
                     onChange={() => {}}
                     className="pointer-events-none"
                   />
-                  <span className="font-medium text-gray-900">{option}</span>
+                  <span className="font-medium text-sm text-gray-900">{option}</span>
                 </div>
               </div>
             ))}
@@ -227,11 +227,11 @@ export default function QuizPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <Card className=" border-black/1 bg-white/80 backdrop-blur-sm">
-            <CardHeader className="text-center pb-6">
+            <CardHeader className="text-left ml-2 pb-6">
               
-              <CardTitle className="text-2xl font-bold text-gray-900 leading-tight">
+              <CardTitle className="text-xl font-bold text-gray-900 leading-tight">
                 <>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mx-auto mb-8">
                   <div className="text-2xl font-bold text-blue-600">
                     {currentQuestion + 1}
                   </div>
@@ -240,7 +240,7 @@ export default function QuizPage() {
                 </>
               </CardTitle>
               {question.description && (
-                <CardDescription className="text-lg text-gray-600 mt-2">
+                <CardDescription className="text-md text-gray-600 mt-2">
                   {question.description}
                 </CardDescription>
               )}
