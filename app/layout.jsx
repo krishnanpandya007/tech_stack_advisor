@@ -35,13 +35,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW2Y4DBDZ8"></script>
-      {`<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-DW2Y4DBDZ8');
-      </script>`}
       <body className={asd.className} style={{ letterSpacing: 0 }}>
         {children}
       </body>

@@ -81,3 +81,18 @@
   }
 }
 
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #60a5fa, #3b82f6, #06b6d4, #60a5fa); /* adjust colors as needed */
+  background-size: 600% 600%;
+  animation: gradient-x 6s ease infinite;
+}
+
