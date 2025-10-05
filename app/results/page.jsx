@@ -29,6 +29,7 @@ import {
 import { calculateTechStackScores } from '@/lib/tech-stacks';
 import { backgroundStyle } from '@/lib/utils';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function ResultsPage() {
   const router = useRouter();
@@ -437,6 +438,8 @@ export default function ResultsPage() {
     </Button>
   </div>
 </div>
+
+    <Footer />
 
     </div>
   );

@@ -83,13 +83,13 @@ export default function Home() {
               <span>Includes Trending Techs</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Choose the Perfect
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
                 Tech Stack
               </span>
               for Your Project
-            </h1>
+            </h2>
             
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Take our intelligent quiz to get personalized technology recommendations based on your 

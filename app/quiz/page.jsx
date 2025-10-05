@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
-import { ArrowLeft, ArrowRight, Code, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Code, CheckCircle, WandSparkles } from 'lucide-react';
 import { quizQuestions } from '@/lib/quiz-data';
 import { backgroundStyle } from '@/lib/utils';
 import Link from 'next/link';
@@ -42,6 +42,7 @@ export default function QuizPage() {
   const handleNext = () => {
     if (currentQuestion < quizQuestions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
+      window.scrollTo(0, 0);
     } else {
       handleSubmit();
     }
@@ -200,8 +201,8 @@ export default function QuizPage() {
                 Tech Stack Advisor
               </h1>
             </Link>
-            <Badge variant="secondary">
-              {currentQuestion + 1} <b>/</b> {quizQuestions.length}
+            <Badge variant="secondary" className='gap-0.5'>
+              {currentQuestion + 1} <b className='text-gray-400'> / </b> {quizQuestions.length}
             </Badge>
           </div>
         </div>
@@ -272,7 +273,7 @@ export default function QuizPage() {
                     </>
                   ) : currentQuestion === quizQuestions.length - 1 ? (
                     <>
-                      <CheckCircle className="w-4 h-4" />
+                      <WandSparkles className="w-4 h-4" />
                       <span>Get Results</span>
                     </>
                   ) : (

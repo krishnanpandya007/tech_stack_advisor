@@ -5,13 +5,14 @@ const asd = Rubik({ subsets: ['latin'], weight: "400" });
 
 export const metadata = {
   title: 'Tech Stack Advisor - Find Your Perfect Technology Stack',
-  description: 'Get personalized technology stack recommendations based on your project requirements, experience level, and constraints. Make informed decisions with our intelligent quiz.',
+  description: 'Not sure which tools to use? Enter your project idea and get smart, tailored tech stack suggestions to build faster and better.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="canonical" href="https://techstackadvisor.info/" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
