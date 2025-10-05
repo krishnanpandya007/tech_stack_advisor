@@ -18,6 +18,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
       </head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW2Y4DBDZ8"></script>
+      {`<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DW2Y4DBDZ8');
+      </script>`}
       <body className={asd.className} style={{ letterSpacing: 0 }}>
         {children}
       </body>
