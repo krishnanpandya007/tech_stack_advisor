@@ -17,6 +17,22 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "TechStackAdvisor",
+              "url": "https://techstackadvisor.info",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://techstackadvisor.info/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
       </head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW2Y4DBDZ8"></script>
       {`<script>
