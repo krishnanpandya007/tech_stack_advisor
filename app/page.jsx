@@ -47,7 +47,7 @@ export default function Home() {
 
   const benefits = [
     'Save hours of research time',
-    'Avoid costly technology mistakes',
+    // 'Avoid costly technology mistakes',
     // 'Get expert-level recommendations',
     // 'Learn about new technologies',
     'Make informed decisions',
@@ -78,7 +78,7 @@ export default function Home() {
 
         <section className="container mx-auto px-4 py-16 text-center w-full" >
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6 ring-1 ring-offset-2 ring-blue-200 border border-blue-400 bg-white">
+            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6 ring-1 ring-offset-2 ring-blue-200 border border-blue-600 bg-white">
               <ZapIcon className="w-4 h-4" />
               <span>Includes Trending Techs</span>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
               for Your Project
             </h2>
             
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-l text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Take our intelligent quiz to get personalized technology recommendations based on your 
               project requirements, experience level, and constraints.
             </p>
@@ -126,7 +126,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start justify-start space-x-2 text-sm text-gray-600 p-2 rounded-l" style={{backgroundColor: "#fafff8ff", border: '1px solid #59AC7730'}}>
                   <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
@@ -182,7 +182,7 @@ export default function Home() {
     }}>
           <CardContent className="text-center py-12 flex justify-center">
             <Card className='w-[25ch] p-2'>
-              <div className="outliner border-2 border border-gray-300 rounded-sm p-2">
+              <div className="outliner border-2 border border-gray-200 rounded-sm p-2">
                 <div className="profile-card-banner  rounded-md py-1 bg-[#696FC7] text-white font-bold ">
                   Let's connect
                 </div>
