@@ -126,12 +126,10 @@ tech_stack_advisor/
 │   ├── layout.tsx         # Root layout
 │   └── page.tsx           # Home page
 ├── components/            # React components
-│   ├── QuizCard.tsx
-│   ├── ResultCard.tsx
 │   └── ...
 ├── lib/                   # Utility functions
-│   ├── recommendations.ts
-│   └── quizLogic.ts
+│   ├── techStacks.js
+│   └── utils.js
 ├── types/                 # TypeScript types
 ├── public/                # Static assets
 └── styles/                # Global styles
