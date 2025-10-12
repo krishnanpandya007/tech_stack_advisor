@@ -126,9 +126,9 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start justify-start space-x-2 text-sm text-gray-600 p-2 rounded-l" style={{backgroundColor: "#fafff8ff", border: '1px solid #59AC7730'}}>
+                <div key={index} className="flex items-center justify-center space-x-2 text-sm text-gray-600 p-2 rounded" style={{backgroundColor: "#fafff8ff", border: '1px solid #59AC7730'}}>
                   <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span className='text-left'>{benefit}</span>
                 </div>
